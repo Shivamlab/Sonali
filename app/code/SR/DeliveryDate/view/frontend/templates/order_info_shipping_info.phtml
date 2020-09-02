@@ -1,0 +1,16 @@
+<div id="delivery-date">
+    <strong><?= __('Delivery Date') ?></strong>
+    <span class="price"><?= $block->getDeliveryDate() ?></span>
+</div>
+<script type="text/javascript">
+    require(
+        ['jquery'],
+        function($) {
+            console.log($('.radio').attr('checked'));
+            var element = $('#delivery-date').detach();
+            $('.box-order-shipping-method').append(element);
+            var element = $('#delivery-comment').detach();
+            $('.box-order-shipping-method').append(element);
+        }
+    );
+</script>
